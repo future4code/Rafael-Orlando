@@ -24,7 +24,6 @@ export default class Etapa1 extends React.Component {
               <input></input>
           </div>
           <button onClick={this.irParaProximaEtapa}>Proxima Etapa</button>
-        
       </div>
         );
     }

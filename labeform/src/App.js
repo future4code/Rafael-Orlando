@@ -39,7 +39,6 @@ render() {
   const telaRenderizada = () => {
     return <Etapa1 proximo={this.renderizaEtapa} />;
   }
-
   
   return <div className="App">{telaRenderizada()}</div>;
  }
