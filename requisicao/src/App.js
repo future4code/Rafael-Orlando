@@ -1,49 +1,40 @@
-import axios from 'axios';
 import React from 'react';
-import './App.css';
-
+import {ListaPagina} from "./pages/ListaPagina";
+import {PaginaUsuario} from "./pages/PaginaUsuario"
 
 
 export default class App extends React.Component {
-
-
-getAllUsers = () => {
-  axios.get()
-}
-
-
-
-
-
-  render() {
-    return(
-      <div className="App">
-          <button>Ir para página de lista</button>
-          <label>
-            <p>Nome :</p>
-            <input
-            />
-            <p>Email :</p>
-            <input></input>
-            <br></br>
-            <button
-            >Salvar</button>
-          </label>
-      </div>
-
-
-
-
-
-
-
-
-    );
-
-
-
+  state ={
+    pagina : 'criarUsuario',
 
   }
-     
 
+  mudarPagina = () => {
+    if(this.state.pagina === 'criarUsuario'){
+      this.setState({pagina : 'listaUsuario'})
+    }else if(this.state.pagina === 'listaUsuario'){
+      this.setState({pagina : 'criarUsuario'})
+    }
+  }
+
+renderizaPagina =() => {
+  switch (this.state.pagina){
+    case 'criarUsuario' : 
+      return < PaginaUsuario />
+    case 'listaUsuario':
+      return <ListaPagina />
+    default :
+      return 
+  } 
+}
+
+  render(){ 
+    return (
+      <div className="App">
+        <h2>Labenusers</h2>
+        <button onClick={this.mudarPagina}>Mudar página</button>
+        {this.renderizaPagina()}
+      </div>
+    );
+  } 
 }
