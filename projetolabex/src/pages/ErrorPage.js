@@ -1,5 +1,5 @@
 import React from 'react'
-import {useHistory} from 'react-router-dom';
+
 import styled from 'styled-components'
 
 const AppContainer = styled.div`
@@ -37,25 +37,12 @@ const EstiloTitulo = styled.h1`
 
 `
 
-const HomePage = () => {
-    const history = useHistory()
-
-    const goToAdminHomePage = () => {
-        history.push("/AdminHomePage")
-    }
-
-    const goToListTripPage = () => {
-        history.push("/ListTripPage")
-    }
-
-
+const ErrorPage = () => {
     return(
         <div>
-            <EstiloTitulo>Home Page</EstiloTitulo>
-            <EstiloBotao onClick={goToAdminHomePage}>Página Admin</EstiloBotao>
-            <EstiloBotao onClick={goToListTripPage}>Página de Viagem</EstiloBotao>
+            <h1>Error Page</h1>
         </div>
     );
 };
 
-export default HomePage;
+export default ErrorPage;
