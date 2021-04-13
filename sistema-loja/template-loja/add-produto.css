@@ -1,0 +1,28 @@
+p{
+    color : red ;
+    margin: 10% ;
+    background-color: whitesmoke ;
+    padding: 10px ;
+
+}
+
+a{
+    margin:2%;
+    padding: 3px;
+}
+
+button{
+    color: #333333 ; 
+    background-color: snow;
+    margin-left: 12%;
+}
+
+label{
+    margin-left: 10%;
+}
+
+h2{
+    margin-left: 12%;
+    margin-top: 5%;
+}
+
