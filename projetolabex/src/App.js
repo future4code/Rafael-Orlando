@@ -11,6 +11,7 @@ import LoginPage from './pages/LoginPage';
 import TripDetailsPage from './pages/TripDetailsPage';
 import ErrorPage from './pages/ErrorPage';
 import {useHistory} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 
 
  const App = () => {
@@ -21,27 +22,27 @@ import {useHistory} from 'react-router-dom';
             <HomePage />
           </Route>
 
-          <Route exact path="/AdminHomePage">
+          <Route exact path="/admin/trips/list">
             <AdminHomePage />
           </Route>
 
-          <Route exact path="/LoginPage">
+          <Route exact path="/login">
             <LoginPage/>
           </Route>
 
-          <Route exact path="/CreateTripPage">
+          <Route exact path="/admin/trips/create">
             <CreateTripPage />
           </Route>
 
-          <Route exact path="/ApplicationFormPage">
+          <Route exact path="/trips/application">
             <ApplicationFormPage />
           </Route>
 
-          <Route exact path="/ListTripPage">
+          <Route exact path="/trips/list/:id">
             <ListTripPage />
           </Route>
 
-          <Route exact path="/TripDetailsPage">
+          <Route exact path="/admin/trips/">
             <TripDetailsPage />
           </Route>
 

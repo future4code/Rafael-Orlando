@@ -1,6 +1,8 @@
-import React from 'react'
-
-import styled from 'styled-components'
+import axios from 'axios';
+import {useHistory} from 'react-router-dom';
+import styled from 'styled-components';
+import { useEffect, useState } from 'react';
+import {useParams} from 'react-router-dom';
 
 const AppContainer = styled.div`
     margin: 30px 0px;
@@ -37,10 +39,19 @@ const EstiloTitulo = styled.h1`
 
 `
 
+
+
+
 const CreateTripPage = () => {
+  const history = useHistory()
+
+  const goToAdminHomePage = () => {
+  history.push('/admin/trips/list')
+}
     return(
         <div>
-            <h1>Create Trip</h1>
+            <EstiloTitulo>Create Trip</EstiloTitulo>
+            <EstiloBotao onClick={goToAdminHomePage}>Voltar</EstiloBotao>
         </div>
     );
 };

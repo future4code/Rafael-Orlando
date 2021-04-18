@@ -1,6 +1,7 @@
 import React from 'react'
 import {useHistory} from 'react-router-dom';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import {useParams} from 'react-router-dom';
 
 const AppContainer = styled.div`
     margin: 30px 0px;
@@ -40,19 +41,19 @@ const EstiloTitulo = styled.h1`
 const HomePage = () => {
     const history = useHistory()
 
-    const goToAdminHomePage = () => {
-        history.push("/AdminHomePage")
+    const goToLoginPage = () => {
+        history.push("/login")
     }
 
     const goToListTripPage = () => {
-        history.push("/ListTripPage")
+        history.push("/trips/list/:id")
     }
 
 
     return(
         <div>
             <EstiloTitulo>Home Page</EstiloTitulo>
-            <EstiloBotao onClick={goToAdminHomePage}>Página Admin</EstiloBotao>
+            <EstiloBotao onClick={goToLoginPage}>Página Admin</EstiloBotao>
             <EstiloBotao onClick={goToListTripPage}>Página de Viagem</EstiloBotao>
         </div>
     );

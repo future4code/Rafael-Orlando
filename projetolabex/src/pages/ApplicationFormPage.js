@@ -1,6 +1,7 @@
 import React from 'react'
 import {useHistory} from 'react-router-dom';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import {useParams} from 'react-router-dom';
 
 const AppContainer = styled.div`
     margin: 30px 0px;
@@ -41,7 +42,7 @@ const ApplicationFormPage = () => {
     const history = useHistory()
 
     const goToAdminHomePage = () => {
-        history.push("/")
+        history.push("/trips/list")
     }
 
     return(
