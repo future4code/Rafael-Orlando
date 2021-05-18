@@ -1,0 +1,12 @@
+{
+  "name": "node-packpage",
+  "version": "1.0.0",
+  "description": "exercicio da aula 1 de back",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "author": "Rafael Orlando",
+  "license": "ISC"
+}
