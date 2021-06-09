@@ -1,0 +1,23 @@
+# @name signup
+
+POST http://localhost:3003/user/signup
+Content-Type: application/json
+
+{
+   "name": "Mary Jane Watson", 
+   "nickname": "MJ", 
+   "email": "mj@oscorp.com" ,
+   "password": "ilovepeter",
+   "role": "ADMIN"
+}
+
+###
+
+
+PUT http://localhost:3003/user/edit
+Content-Type: application/json
+Authorization: 
+
+{
+   "name": "MARY JANE" 
+}
